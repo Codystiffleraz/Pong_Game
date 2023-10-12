@@ -10,13 +10,14 @@ screen.setup(height=600, width=800)
 screen.title("Pong")
 screen.tracer(0)
 
+# Calling the paddles, ball and scoreboard
 r_paddle = Paddle((350,0))
 l_paddle = Paddle((-350,0))
 ball = Ball()
 scoreboard = Scoreboard()
 
 
-
+# Listening to the keys for moving the paddles
 screen.listen()
 screen.onkey(r_paddle.go_up, "Up")
 screen.onkey(r_paddle.go_down, "Down")
